@@ -15,5 +15,5 @@ if [ -n "$SED_COMMAND" ]; then
   test -n "$RESULT"
 fi
 
-wget -O - -q "$REEVE_API/api/v1/var/set?key=${RESULT_VAR:-GIT_TAG}&value=$RESULT" >/dev/null
+wget -O - -q "$REEVE_API/api/v1/var?key=${RESULT_VAR:-GIT_TAG}&value=$RESULT" >/dev/null
 echo Set ${RESULT_VAR:-GIT_TAG}=$RESULT
